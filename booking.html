@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking and Scheduling System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link
+  rel="stylesheet"
+  href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin"
+/>
+
+<!-- CSS Global Compulsory -->
+<link
+  rel="stylesheet"
+  href="assets/plugins/bootstrap/css/bootstrap.min.css"
+/>
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<!-- CSS Header and Footer -->
+<link rel="stylesheet" href="assets/css/header.css" />
+<link rel="stylesheet" href="assets/css/footer.css" />
+
+<!-- CSS Implementing Plugins -->
+<link rel="stylesheet" href="assets/plugins/line-icons-pro/styles.css" />
+<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css" />
+<link
+  rel="stylesheet"
+  href="assets/plugins/font-awesome/css/font-awesome.min.css"
+/>
+
+<!-- CSS Customization -->
+<link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+  
+  <div class="wrapper">
+    <!--=== Header v1 ===-->
+    <div class="header-v1">
+      <!-- Topbar -->
+      <div class="topbar-v1">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-inline top-v1-contacts">
+                <li><i class="fa fa-envelope"></i> Email: unity@gmail.com</li>
+                <li><i class="fa fa-phone"></i> Contact no : 88666 00555</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- End Topbar -->
+
+      <!-- Navbar -->
+      <div class="navbar mega-menu" role="navigation">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="res-container">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target=".navbar-responsive-collapse"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <div class="navbar-brand">
+              <a href="index.html">
+                <img src="assets/img/logo/unity_white.jpg" alt="Logo" />
+              </a>
+            </div>
+          </div>
+          <!--/end responsive container-->
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-responsive-collapse">
+            <div class="res-container">
+              <ul class="nav navbar-nav">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+
+                <!-- Home  -->
+                <li class="mega-menu-fullwidth">
+                  <a href="index.html"> HOME </a>
+                </li>
+                <!-- End Home-->
+
+                <!-- About Us -->
+                <li class="mega-menu-fullwidth">
+                  <a href="about.html"> ABOUT US </a>
+                </li>
+                <!-- End About us -->
+
+                <!-- Doctors -->
+                <li class="mega-menu-fullwidth">
+                  <a href="doctors.html"> Sectors </a>
+                </li>
+                <!-- End Doctors -->
+                   <!-- booking -->
+                   <li class="mega-menu-fullwidth">
+                    <a href="/Hospital-Management-Html-master/booking.html"> Booking </a>
+                  </li>
+                 
+                 <!-- end here  -->
+
+                <!-- Gallery -->
+                <li class="mega-menu-fullwidth">
+                  <a href="/Hospital-Management-Html-master/rating.html"> Review & Ratings </a>
+                </li>
+                <!-- <li class="mega-menu-fullwidth">
+                  <a href="gallery.html"> GALLERY </a>
+                </li> -->
+                <!-- End Gallery -->
+
+                <!-- Blog -->
+                <li style="color: ;" class="mega-menu-fullwidth">
+                  <a href="blog.html"> BLOGS </a>
+                </li>
+                <!-- End Blog -->
+
+                <!-- Contact Us -->
+                <li class="mega-menu-fullwidth">
+                  <a href="contact.html"> CONTACT US </a>
+                </li>
+                <!-- End Contact us -->
+
+                <!-- Registration -->
+                <li class="mega-menu-fullwidth">
+                  <a href="/Hospital-Management-Html-master/signup.html"> SignUp </a>
+                </li>
+                <!-- End registration -->
+
+                <!-- login -->
+                <!-- <li class="mega-menu-fullwidth">
+                  <a href="login.html"> LOGIN </a>
+                </li> -->
+                <!-- End login -->
+
+                <!-- Appointment -->
+                <li class="mega-menu-fullwidth">
+                  <a href="appointment.html"> BOOK APPOINTMENT </a>
+                </li>
+                <!-- End Appointment -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  <!-- Main Container -->
+  <div class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+
+
+    <!-- Header -->
+    <h1 class="text-3xl font-bold mb-6 text-center">Service Booking System</h1>
+
+    <!-- Service Selection Dropdown -->
+    <div class="mb-4">
+      <label for="service" class="block text-lg font-medium mb-2">Select a Service</label>
+      <select id="service" class="w-full p-2 border rounded-lg">
+        <option value="AC Technician">AC Technician</option>
+        <option value="Electrician">Electrician</option>
+        <option value="Plumber">Plumber</option>
+        <option value="Mechanic">Mechanic</option>
+        <option value="Carpenter">Carpenter</option>
+        <option value="Cleaning and Pest Control">Cleaning and Pest Control</option>
+        <option value="Home Appliances Repair">Home Appliances Repair</option>
+        <option value="Building Painting">Building Painting</option>
+      </select>
+    </div>
+
+    <!-- Booking Options -->
+    <div class="mb-6">
+      <label class="block text-lg font-medium mb-2">Booking Type</label>
+      <div class="flex items-center">
+        <input type="radio" id="instant" name="bookingType" value="instant" class="mr-2" checked>
+        <label for="instant" class="mr-4">Instant Booking</label>
+        
+        <input type="radio" id="scheduled" name="bookingType" value="scheduled" class="mr-2">
+        <label for="scheduled">Scheduled Booking</label>
+      </div>
+    </div>
+
+    <!-- Scheduled Booking Date and Time Picker -->
+    <div id="scheduleOptions" class="mb-6 hidden">
+      <label for="date" class="block text-lg font-medium mb-2">Select Date and Time</label>
+      <input type="date" id="date" class="w-full p-2 border rounded-lg mb-4">
+      <input type="time" id="time" class="w-full p-2 border rounded-lg">
+    </div>
+
+    <!-- Book Now Button -->
+    <button onclick="bookService()" class="w-full bg-blue-500 text-white py-2 rounded-lg font-semibold hover:bg-blue-600">
+     <a href="/Hospital-Management-Html-master/about.html"> Book Now</a>
+    </button>
+
+    <!-- Confirmation Notification -->
+    <div id="confirmation" class="mt-6 hidden bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-lg">
+      <p id="confirmationMessage"></p>
+    </div>
+  </div>
+
+  <!-- JavaScript for Booking Logic -->
+  <script>
+    const bookingTypeInputs = document.querySelectorAll('input[name="bookingType"]');
+    const scheduleOptions = document.getElementById('scheduleOptions');
+    const confirmationDiv = document.getElementById('confirmation');
+    const confirmationMessage = document.getElementById('confirmationMessage');
+
+    // Show/hide date and time picker based on booking type
+    bookingTypeInputs.forEach(input => {
+      input.addEventListener('change', () => {
+        if (document.getElementById('scheduled').checked) {
+          scheduleOptions.classList.remove('hidden');
+        } else {
+          scheduleOptions.classList.add('hidden');
+        }
+      });
+    });
+
+    // Function to handle booking
+    function bookService() {
+      const service = document.getElementById('service').value;
+      const bookingType = document.querySelector('input[name="bookingType"]:checked').value;
+
+      if (bookingType === 'scheduled') {
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+
+        if (!date || !time) {
+          alert('Please select a date and time for the scheduled booking.');
+          return;
+        }
+
+        confirmationMessage.innerText = `Your ${service} service is scheduled for ${date} at ${time}.`;
+      } else {
+        confirmationMessage.innerText = `Your ${service} service has been booked instantly. The service provider will contact you shortly.`;
+      }
+
+      confirmationDiv.classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>

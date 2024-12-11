@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Support</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <link
+  rel="stylesheet"
+  href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin"
+/> -->
+
+<!-- CSS Global Compulsory -->
+<link
+  rel="stylesheet"
+  href="assets/plugins/bootstrap/css/bootstrap.min.css"
+/>
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<!-- CSS Header and Footer -->
+<link rel="stylesheet" href="assets/css/header.css" />
+<link rel="stylesheet" href="assets/css/footer.css" />
+
+<!-- CSS Implementing Plugins -->
+<link rel="stylesheet" href="assets/plugins/line-icons-pro/styles.css" />
+<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css" />
+<link
+  rel="stylesheet"
+  href="assets/plugins/font-awesome/css/font-awesome.min.css"
+/>
+
+<!-- CSS Customization -->
+<link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+  <div class="wrapper">
+    <!--=== Header v1 ===-->
+    <div class="header-v1">
+      <!-- Topbar -->
+      <div class="topbar-v1">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-inline top-v1-contacts">
+                <li><i class="fa fa-envelope"></i> Email: unity@gmail.com</li>
+                <li><i class="fa fa-phone"></i> Contact no : 88666 00555</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- End Topbar -->
+
+      <!-- Navbar -->
+      <div class="navbar mega-menu" role="navigation">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="res-container">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target=".navbar-responsive-collapse"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <div class="navbar-brand">
+              <a href="index.html">
+                <img src="assets/img/logo/unity_white.jpg" alt="Logo" />
+              </a>
+            </div>
+          </div>
+          <!--/end responsive container-->
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-responsive-collapse">
+            <div class="res-container">
+              <ul class="nav navbar-nav">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+
+                <!-- Home  -->
+                <li class="mega-menu-fullwidth">
+                  <a href="index.html"> HOME </a>
+                </li>
+                <!-- End Home-->
+
+                <!-- About Us -->
+                <li class="mega-menu-fullwidth">
+                  <a href="about.html"> ABOUT US </a>
+                </li>
+                <!-- End About us -->
+
+                <!-- Doctors -->
+                <li class="mega-menu-fullwidth">
+                  <a href="doctors.html"> Sectors </a>
+                </li>
+                <!-- End Doctors -->
+                  <!-- booking -->
+                  <li class="mega-menu-fullwidth">
+                    <a href="/Hospital-Management-Html-master/booking.html"> Booking </a>
+                  </li>
+                 
+                 <!-- end here  -->
+
+                <!-- Gallery -->
+                <li class="mega-menu-fullwidth">
+                  <a href="/Hospital-Management-Html-master/rating.html"> Review & Ratings </a>
+                </li>
+                <!-- End Gallery -->
+
+                <!-- Blog -->
+                <li class="mega-menu-fullwidth">
+                  <a href="blog.html"> BLOGS </a>
+                </li>
+                <!-- End Blog -->
+
+                <!-- Contact Us -->
+                <li class="mega-menu-fullwidth">
+                  <a href="contact.html"> CONTACT US </a>
+                </li>
+                <!-- End Contact us -->
+
+                <!-- Registration -->
+                <li class="mega-menu-fullwidth">
+                  <a href="/Hospital-Management-Html-master/signup.html"> SignUp </a>
+                </li>
+                <!-- End registration -->
+
+                <!-- login -->
+                <!-- <li class="mega-menu-fullwidth">
+                  <a href="login.html"> LOGIN </a>
+                </li> -->
+                <!-- End login -->
+
+                <!-- Appointment -->
+                <li class="mega-menu-fullwidth">
+                  <a href="appointment.html"> BOOK APPOINTMENT </a>
+                </li>
+                <!-- End Appointment -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  <!-- Main Container -->
+  <div class="max-w-5xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+
+    <!-- Header -->
+    <h1 class="text-3xl font-bold mb-8 text-center">Customer Support</h1>
+
+    <!-- Tabs for Navigation -->
+    <div class="flex border-b mb-6">
+      <button id="faqTab" class="px-4 py-2 text-lg font-semibold text-blue-500 border-b-2 border-blue-500" onclick="showSection('faq')">FAQ</button>
+      <button id="ticketTab" class="px-4 py-2 text-lg font-semibold text-gray-500" onclick="showSection('ticket')">Submit a Ticket</button>
+    </div>
+
+    <!-- FAQ Section -->
+    <div id="faqSection">
+      <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+
+        <!-- FAQ Item 1 -->
+        <div class="border-b pb-2">
+          <button class="w-full text-left font-semibold text-lg focus:outline-none" onclick="toggleFaq('faq1')">
+            How do I book a service?
+          </button>
+          <div id="faq1" class="hidden mt-2 text-gray-600">
+            You can book a service by selecting the service category and choosing a date and time that suits you.
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="border-b pb-2">
+          <button class="w-full text-left font-semibold text-lg focus:outline-none" onclick="toggleFaq('faq2')">
+            How do I cancel a booking?
+          </button>
+          <div id="faq2" class="hidden mt-2 text-gray-600">
+            To cancel a booking, go to your bookings section and click 'Cancel' next to the booking you want to cancel.
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="border-b pb-2">
+          <button class="w-full text-left font-semibold text-lg focus:outline-none" onclick="toggleFaq('faq3')">
+            What if the service provider doesn’t show up?
+          </button>
+          <div id="faq3" class="hidden mt-2 text-gray-600">
+            If the service provider doesn't show up, you can raise a support ticket, and we'll address the issue promptly.
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="border-b pb-2">
+          <button class="w-full text-left font-semibold text-lg focus:outline-none" onclick="toggleFaq('faq4')">
+            How do I contact support?
+          </button>
+          <div id="faq4" class="hidden mt-2 text-gray-600">
+            You can contact support by submitting a ticket using the 'Submit a Ticket' form or emailing us at support@example.com.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Support Ticket Section -->
+    <div id="ticketSection" class="hidden">
+      <h2 class="text-2xl font-bold mb-4">Submit a Support Ticket</h2>
+      
+      <form id="ticketForm" class="space-y-4">
+        
+        <!-- Name Field -->
+        <div>
+          <label for="name" class="block font-medium mb-2">Your Name</label>
+          <input type="text" id="name" class="w-full p-2 border rounded-lg" placeholder="Enter your name" required>
+        </div>
+
+        <!-- Email Field -->
+        <div>
+          <label for="email" class="block font-medium mb-2">Your Email</label>
+          <input type="email" id="email" class="w-full p-2 border rounded-lg" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Service Category Field -->
+        <div>
+          <label for="category" class="block font-medium mb-2">Service Category</label>
+          <select id="category" class="w-full p-2 border rounded-lg" required>
+            <option value="">Select a category</option>
+            <option>AC Technician</option>
+            <option>Electrician</option>
+            <option>Plumber</option>
+            <option>Mechanic</option>
+            <option>Carpenter</option>
+            <option>Cleaning and Pest Control</option>
+            <option>Home Appliances Repair</option>
+            <option>Building Painting</option>
+          </select>
+        </div>
+
+        <!-- Issue Description Field -->
+        <div>
+          <label for="issue" class="block font-medium mb-2">Describe Your Issue</label>
+          <textarea id="issue" rows="4" class="w-full p-2 border rounded-lg" placeholder="Enter issue details" required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg font-semibold hover:bg-blue-600">
+          Submit Ticket
+        </button>
+
+      </form>
+
+      <!-- Success Message -->
+      <div id="successMessage" class="hidden mt-6 bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-lg">
+        Your support ticket has been submitted successfully! We will get back to you soon.
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JavaScript for Interactivity -->
+  <script>
+    // Function to toggle FAQ answers
+    function toggleFaq(id) {
+      const faq = document.getElementById(id);
+      faq.classList.toggle('hidden');
+    }
+
+    // Function to show the selected section (FAQ or Ticket Form)
+    function showSection(section) {
+      const faqSection = document.getElementById('faqSection');
+      const ticketSection = document.getElementById('ticketSection');
+      const faqTab = document.getElementById('faqTab');
+      const ticketTab = document.getElementById('ticketTab');
+
+      if (section === 'faq') {
+        faqSection.classList.remove('hidden');
+        ticketSection.classList.add('hidden');
+        faqTab.classList.add('text-blue-500', 'border-blue-500');
+        faqTab.classList.remove('text-gray-500');
+        ticketTab.classList.add('text-gray-500');
+        ticketTab.classList.remove('text-blue-500', 'border-blue-500');
+      } else {
+        ticketSection.classList.remove('hidden');
+        faqSection.classList.add('hidden');
+        ticketTab.classList.add('text-blue-500', 'border-blue-500');
+        ticketTab.classList.remove('text-gray-500');
+        faqTab.classList.add('text-gray-500');
+        faqTab.classList.remove('text-blue-500', 'border-blue-500');
+      }
+    }
+
+    // Function to handle form submission
+    document.getElementById('ticketForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      document.getElementById('successMessage').classList.remove('hidden');
+      setTimeout(() => {
+        document.getElementById('successMessage').classList.add('hidden');
+        document.getElementById('ticketForm').reset();
+      }, 3000);
+    });
+  </script>
+ 
+</body>
+</html>

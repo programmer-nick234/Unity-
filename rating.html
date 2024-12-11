@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Review and Rating System</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin"
+/>
+
+<!-- CSS Global Compulsory -->
+<link
+  rel="stylesheet"
+  href="assets/plugins/bootstrap/css/bootstrap.min.css"
+/>
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<!-- CSS Header and Footer -->
+<link rel="stylesheet" href="assets/css/header.css" />
+<link rel="stylesheet" href="assets/css/footer.css" />
+
+<!-- CSS Implementing Plugins -->
+<link rel="stylesheet" href="assets/plugins/line-icons-pro/styles.css" />
+<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css" />
+<link
+  rel="stylesheet"
+  href="assets/plugins/font-awesome/css/font-awesome.min.css"
+/>
+
+<!-- CSS Customization -->
+<link rel="stylesheet" href="assets/css/custom.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #ffffff, #dbeafe);
+    }
+    .star {
+      cursor: pointer;
+      transition: color 0.2s;
+      font-size: 2rem;
+      color: #ddd;
+    }
+    .star.checked {
+      color: gold;
+    }
+    .tag {
+      background-color: #f0f4f8;
+      padding: 0.2rem 0.5rem;
+      border-radius: 10px;
+      margin-right: 0.5rem;
+      cursor: pointer;
+    }
+    .review-item {
+      background-color: #f9fafb;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .badge {
+      background-color: #72c02c;
+      color: white;
+      padding: 0.5rem;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    h1 {
+      text-align: center;
+    }
+    .thank-you {
+      display: none;
+      background-color: #72c02c;
+      padding: 1rem;
+      border-radius: 8px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+    }
+    .review-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .review-column {
+      flex: 1 1 calc(33% - 1rem); /* 3 reviews per row */
+      min-width: 250px;
+    }
+  </style>
+</head>
+<div class="wrapper">
+  <!--=== Header v1 ===-->
+  <div class="header-v1">
+    <!-- Topbar -->
+    <div class="topbar-v1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="list-inline top-v1-contacts">
+              <li><i class="fa fa-envelope"></i> Email: unity@gmail.com</li>
+              <li><i class="fa fa-phone"></i> Contact no : 88666 00555</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Topbar -->
+
+    <!-- Navbar -->
+    <div class="navbar mega-menu" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="res-container">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-responsive-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="navbar-brand">
+            <a href="index.html">
+              <img src="assets/img/logo/unity_white.jpg" alt="Logo" />
+            </a>
+          </div>
+        </div>
+        <!--/end responsive container-->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-responsive-collapse">
+          <div class="res-container">
+            <ul class="nav navbar-nav">
+              <!-- Collect the nav links, forms, and other content for toggling -->
+
+              <!-- Home  -->
+              <li class="mega-menu-fullwidth">
+                <a href="index.html"> HOME </a>
+              </li>
+              <!-- End Home-->
+
+              <!-- About Us -->
+              <li class="mega-menu-fullwidth">
+                <a href="about.html"> ABOUT US </a>
+              </li>
+              <!-- End About us -->
+
+              <!-- Doctors -->
+              <li class="mega-menu-fullwidth">
+                <a href="doctors.html"> Sectors </a>
+              </li>
+              <!-- End Doctors -->
+
+              <!-- Gallery -->
+              <li class="mega-menu-fullwidth">
+                <a href="/Hospital-Management-Html-master/rating.html"> Review & Ratings </a>
+              </li>
+              <!-- End Gallery -->
+
+              <!-- Blog -->
+              <li class="mega-menu-fullwidth">
+                <a href="blog.html"> BLOGS </a>
+              </li>
+              <!-- End Blog -->
+
+              <!-- Contact Us -->
+              <li class="mega-menu-fullwidth">
+                <a href="contact.html"> CONTACT US </a>
+              </li>
+              <!-- End Contact us -->
+
+              <!-- Registration -->
+              <li class="mega-menu-fullwidth">
+                <a href="/Hospital-Management-Html-master/signup.html"> SignUp </a>
+              </li>
+              <!-- End registration -->
+
+              <!-- login -->
+              <!-- <li class="mega-menu-fullwidth">
+                <a href="login.html"> LOGIN </a>
+              </li> -->
+              <!-- End login -->
+
+              <!-- Appointment -->
+              <!-- <li class="mega-menu-fullwidth">
+                <a href="appointment.html"> BOOK APPOINTMENT </a>
+              </li> -->
+              <!-- End Appointment -->
+              <li class="mega-menu-fullwidth">
+                <a href="/Hospital-Management-Html-master/customer.html"> Customer care </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<body class="font-sans min-h-screen flex items-center justify-center">
+
+  <div class="max-w-4xl w-full mx-4 p-5 bg-white shadow-lg rounded-lg">
+    <!-- Updated Heading, Centered -->
+    <h1 class="text-3xl font-bold mb-6 text-black">Review and Rating</h1>
+
+    <!-- Thank You Message -->
+    <div id="thankYouMessage" class="thank-you mb-8">
+      Thank you for your review!
+    </div>
+
+    <!-- Review Form -->
+    <form id="reviewForm" class="mb-8">
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-2">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" class="w-full px-3 py-2 border rounded-lg">
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-2">Your Location</label>
+        <input type="text" id="location" placeholder="Enter your location" class="w-full px-3 py-2 border rounded-lg">
+      </div>
+
+      <!-- Star Rating for Overall Rating -->
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-2">Rating</label>
+        <div id="starRating" class="flex">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+        <input type="hidden" id="overallRating" value="">
+      </div>
+
+      <!-- Rating Categories -->
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-2">Rating Categories</label>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div>
+            <label class="block">Professionalism</label>
+            <input type="number" id="professionalism" min="1" max="5" class="w-full px-3 py-2 border rounded-lg">
+          </div>
+          <div>
+            <label class="block">Timeliness</label>
+            <input type="number" id="timeliness" min="1" max="5" class="w-full px-3 py-2 border rounded-lg">
+          </div>
+          <div>
+            <label class="block">Quality of Work</label>
+            <input type="number" id="quality" min="1" max="5" class="w-full px-3 py-2 border rounded-lg">
+          </div>
+          <div>
+            <label class="block">Value for Money</label>
+            <input type="number" id="value" min="1" max="5" class="w-full px-3 py-2 border rounded-lg">
+          </div>
+        </div>
+      </div>
+
+      <!-- Tags -->
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-2">Tags</label>
+        <input type="text" id="tags" placeholder="Enter tags (e.g., Friendly Staff, Quick Service)" class="w-full px-3 py-2 border rounded-lg">
+      </div>
+
+      <!-- Anonymous Review -->
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-2">
+          <input type="checkbox" id="anonymous"> Post anonymously
+        </label>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-2">Review</label>
+        <textarea id="comment" placeholder="Write your review" class="w-full px-3 py-2 border rounded-lg" rows="4"></textarea>
+      </div>
+
+      <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-green-600">Submit Review</button>
+    </form>
+
+    <!-- Review Highlights -->
+    <div id="reviewHighlights" class="mb-8">
+      <h2 class="text-xl font-bold mb-4">Review Highlights</h2>
+      <div id="positiveReviews" class="space-y-4">
+        <!-- Positive reviews will be displayed here -->
+      </div>
+      <div id="negativeReviews" class="space-y-4">
+        <!-- Negative reviews will be displayed here -->
+      </div>
+    </div>
+
+    <!-- Pie Chart -->
+    <div class="mb-8 flex justify-center">
+      <canvas id="ratingChart" width="250" height="250"></canvas> <!-- Reduced size -->
+    </div>
+
+    <!-- Review List -->
+    <div id="reviewList" class="review-row">
+      <!-- Reviews will be appended here -->
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('reviewForm');
+    const reviewList = document.getElementById('reviewList');
+    const positiveReviews = document.getElementById('positiveReviews');
+    const negativeReviews = document.getElementById('negativeReviews');
+    const ctx = document.getElementById('ratingChart').getContext('2d');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+    const starRating = document.getElementById('starRating');
+    const overallRatingInput = document.getElementById('overallRating');
+    let reviews = [];
+    let chart = null;
+
+    // Predefined example reviews
+    const exampleReviews = [
+      { name: 'Ravi Kumar', location: 'Delhi', professionalism: 5, timeliness: 4, quality: 5, value: 5, tags: ['Friendly Staff', 'Quick Service'], comment: 'Great experience, very professional and timely!', date: '2024-12-01', rating: 5 },
+      { name: 'Priya Sharma', location: 'Mumbai', professionalism: 4, timeliness: 4, quality: 4, value: 4, tags: ['Helpful', 'Skilled'], comment: 'Very skilled, but a little delayed.', date: '2024-12-02', rating: 4 },
+      { name: 'Anil Gupta', location: 'Bangalore', professionalism: 3, timeliness: 3, quality: 3, value: 3, tags: ['Average'], comment: 'Service was okay, but there is room for improvement.', date: '2024-12-03', rating: 3 },
+      { name: 'Meera Reddy', location: 'Chennai', professionalism: 5, timeliness: 5, quality: 5, value: 5, tags: ['Excellent'], comment: 'Exceptional service, highly recommend!', date: '2024-12-04', rating: 5 },
+      { name: 'Suresh Patil', location: 'Pune', professionalism: 2, timeliness: 2, quality: 2, value: 2, tags: ['Poor Experience'], comment: 'The service was disappointing and delayed.', date: '2024-12-05', rating: 2 }
+    ];
+
+    // Add example reviews to the list on page load
+    exampleReviews.forEach(review => {
+      reviews.push(review);
+    });
+
+    // Handle star rating selection
+    starRating.addEventListener('click', (e) => {
+      if (e.target.classList.contains('star')) {
+        const rating = parseInt(e.target.dataset.value);
+        overallRatingInput.value = rating;
+
+        const stars = e.target.parentElement.children;
+        for (let i = 0; i < stars.length; i++) {
+          if (i < rating) {
+            stars[i].classList.add('checked');
+          } else {
+            stars[i].classList.remove('checked');
+          }
+        }
+      }
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const location = document.getElementById('location').value;
+      const professionalism = parseInt(document.getElementById('professionalism').value);
+      const timeliness = parseInt(document.getElementById('timeliness').value);
+      const quality = parseInt(document.getElementById('quality').value);
+      const value = parseInt(document.getElementById('value').value);
+      const tags = document.getElementById('tags').value.split(',').map(tag => tag.trim());
+      const comment = document.getElementById('comment').value;
+      const anonymous = document.getElementById('anonymous').checked;
+      const overallRating = parseInt(overallRatingInput.value);
+
+      if (!name || !location || !comment || professionalism < 1 || timeliness < 1 || quality < 1 || value < 1 || !overallRating) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      const review = {
+        name: anonymous ? "Anonymous" : name,
+        location,
+        professionalism,
+        timeliness,
+        quality,
+        value,
+        tags,
+        comment,
+        date: new Date().toLocaleDateString(),
+        rating: overallRating
+      };
+
+      reviews.push(review);
+      displayReviews();
+      form.reset();
+      overallRatingInput.value = ''; // Clear overall rating input
+      thankYouMessage.style.display = 'block'; // Show thank you message
+      setTimeout(() => {
+        thankYouMessage.style.display = 'none'; // Hide message after 3 seconds
+      }, 3000);
+    });
+
+    function displayReviews() {
+      reviewList.innerHTML = '';
+      positiveReviews.innerHTML = '';
+      negativeReviews.innerHTML = '';
+
+      let totalRating = 0;
+      let ratingCounts = [0, 0, 0, 0, 0];
+
+      reviews.forEach((review) => {
+        totalRating += (review.professionalism + review.timeliness + review.quality + review.value) / 4;
+        const averageRating = (review.professionalism + review.timeliness + review.quality + review.value) / 4;
+
+        // Highlight positive and negative reviews
+        const reviewElement = createReviewElement(review);
+        if (averageRating >= 4) {
+          positiveReviews.appendChild(reviewElement);
+        } else {
+          negativeReviews.appendChild(reviewElement);
+        }
+
+        // Rating statistics
+        ratingCounts[Math.floor(averageRating) - 1]++;
+
+        const reviewItem = createReviewElement(review);
+        reviewList.appendChild(reviewItem);
+      });
+
+      const average = (totalRating / reviews.length).toFixed(2);
+      updateChart(ratingCounts);
+    }
+
+    function createReviewElement(review) {
+      const reviewElement = document.createElement('div');
+      reviewElement.classList.add('review-item', 'review-column');
+      reviewElement.innerHTML = `
+        <h3 class="text-lg font-semibold text-blue-700">${review.name} (${review.location})</h3>
+        <div class="tags">
+          ${review.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+        </div>
+        <p class="text-yellow-400 mb-1">Rating: ${'★'.repeat(review.rating)}${'★'.repeat(5 - review.rating)}</p>
+        <p class="text-gray-700 mb-2">${review.comment}</p>
+        <small class="text-gray-500">${review.date}</small>
+      `;
+      return reviewElement;
+    }
+
+    function updateChart(ratingCounts) {
+      if (chart) chart.destroy();
+
+      chart = new Chart(ctx, {
+        type: 'pie',
+        plugins: [ChartDataLabels],
+        data: {
+          labels: ['1 Star', '2 Stars', '3 Stars', '4 Stars', '5 Stars'],
+          datasets: [{
+            data: ratingCounts,
+            backgroundColor: ['#ff4d4d', '#ffa64d', '#ffd700', '#a6e22e', '#32cd32']
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            datalabels: {
+              color: '#fff',
+              formatter: (value, context) => {
+                const total = ratingCounts.reduce((sum, count) => sum + count, 0);
+                return total ? `${((value / total) * 100).toFixed(1)}%` : '0%';
+              },
+              font: {
+                weight: 'bold'
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // Initial display of reviews and chart
+    displayReviews();
+  </script>
+</body>
+</html>
